@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DRSA — Deep Research + PDF Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+    <h1>🚀 DRSA — Deep Research Synthesis Agent</h1>
+    <p>Multi-source AI research engine with PDF reporting & dashboard analytics</p>
+</header>
+
+<section class="hero">
+    <h2>Enter Topic — Get Instant Academic Report 📄</h2>
+    <form method="POST" action="/run">
+        <input type="text" name="topic" placeholder="Example: Quantum Cryptography in IoT" required>
+        <button type="submit">Generate Research</button>
+    </form>
+</section>
+
+
+<section class="features">
+    <div class="card"><h3>📚 Multi-Source Retrieval</h3><p>Wikipedia + Arxiv + Semantic Scholar</p></div>
+    <div class="card"><h3>🧠 AI Synthesis Engine</h3><p>Structured Summary & Research Sections</p></div>
+    <div class="card"><h3>📄 PDF Generation</h3><p>Export research papers instantly</p></div>
+    <div class="card"><h3>📊 Dashboard</h3><p>Auto-summarized knowledge archive</p></div>
+</section>
+
+{% if report %}
+<section class="output">
+    <h2>📄 Report Generated Successfully</h2>
+
+    <div class="report-box">
+        <pre>{{ copy_block }}</pre>
+    </div>
+
+    <a class="btn download" href="/download?pdf={{pdf_path}}" download>⬇ Download PDF</a>
+    <a class="btn dashboard" href="/dashboard">📊 Open Dashboard</a>
+</section>
+{% endif %}
+
+<footer>
+    Built with ❤️  | DRSA v3.2<br>
+    FastAPI + AI Retrieval + PDF Engine
+</footer>
+
+</body>
+</html>

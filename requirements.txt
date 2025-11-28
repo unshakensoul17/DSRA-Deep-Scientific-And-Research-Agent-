@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+openai>=1.0.0
+requests>=2.31.0
+PyMuPDF>=1.23.0
+python-dotenv
+langchain
+pydantic
+jinja2
