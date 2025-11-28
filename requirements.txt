@@ -1,9 +1,12 @@
 fastapi
 uvicorn[standard]
+requests
 openai>=1.0.0
-requests>=2.31.0
-PyMuPDF>=1.23.0
 python-dotenv
-langchain
-pydantic
+reportlab>=3.6.12
 jinja2
+python-multipart
+PyMuPDF
+pandas
+tqdm
+langchain

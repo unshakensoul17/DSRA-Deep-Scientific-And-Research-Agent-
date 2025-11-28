@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: dsra-backend
+    runtime: python
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
